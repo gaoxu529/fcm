@@ -91,12 +91,12 @@ class FcmChannel
      */
     protected function messaging()
     {
-        try {
-            $messaging = app('firebase.manager')->project($this->fcmProject)->messaging();
-        } catch (BindingResolutionException $e) {
-            $messaging = app('firebase.messaging');
-        }
-
+//        try {
+//            $messaging = app('firebase.manager')->project($this->fcmProject)->messaging();
+//        } catch (BindingResolutionException $e) {
+//            $messaging = app('firebase.messaging');
+//        }
+        $messaging = app('firebase.messaging');
         return $messaging;
     }
 
